@@ -16,9 +16,7 @@ Personal website of Idriss CHELIKH — Robotics & Control Engineer.
 └── README.md
 ```
 
-## How to add content
-
-### Add a publication
+## How to add a publication
 1. Drop your PDF in `papers/`
 2. Create a `.md` file in `content/`:
 
@@ -36,7 +34,7 @@ arxiv: https://arxiv.org/abs/xxxx.xxxxx
 ---
 ```
 
-### Add a project
+## How to add a project
 Create a `.md` file in `content/`:
 
 ```markdown
@@ -53,5 +51,4 @@ order: 1
 The `order` field controls the display order (lowest first).
 
 ## Deploy
-
 Push to `main` branch → live at `https://OcelotIC.github.io`

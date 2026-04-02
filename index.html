@@ -605,7 +605,13 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Fallback: show content if JS hasn't run after 2s */
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in { opacity: 1; transform: none; }
+        }
     </style>
+    <!-- If JS is disabled, show everything -->
+    <noscript><style>.fade-in { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 
 <body>
@@ -932,9 +938,4 @@
 
     /* ==============================================================
        Scroll animation observer
-       ============================================================== */
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-
-    docum
+       ==
