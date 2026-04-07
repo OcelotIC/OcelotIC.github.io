@@ -596,22 +596,21 @@
         /* ============================================================
            ANIMATION — fade in on scroll
            ============================================================ */
-        .fade-in {
+        /* Elements are visible by default.
+           JS adds .js-ready to <html>, which enables the animation. */
+        .js-ready .fade-in {
             opacity: 0;
             transform: translateY(16px);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
-        .fade-in.visible {
+        .js-ready .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        /* Fallback: show content if JS hasn't run after 2s */
         @media (prefers-reduced-motion: reduce) {
-            .fade-in { opacity: 1; transform: none; }
+            .js-ready .fade-in { opacity: 1; transform: none; }
         }
     </style>
-    <!-- If JS is disabled, show everything -->
-    <noscript><style>.fade-in { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 
 <body>
@@ -789,6 +788,9 @@
      SCRIPT — Dynamic content loading from .md files via GitHub API
      ================================================================ -->
 <script>
+    // Enable fade-in animations only when JS is running
+    document.documentElement.classList.add('js-ready');
+
     /* ==============================================================
        CONFIGURATION — change this one value, everything else follows
        ============================================================== */
@@ -929,13 +931,4 @@
             const msg = `<div class="error-message">
                 Could not load content from GitHub.<br>
                 <small>Make sure the repo <strong>${REPO_NAME}</strong> is public
-                and contains a <code>${CONTENT_PATH}/</code> folder with .md files.</small>
-            </div>`;
-            pubBox.innerHTML = msg;
-            prjBox.innerHTML = msg;
-        }
-    }
-
-    /* ==============================================================
-       Scroll animation observer
-       ==
+                and contains a <code>${CONTENT_PATH}/</code> 

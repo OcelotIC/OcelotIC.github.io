@@ -10,9 +10,7 @@ Personal website of Idriss CHELIKH — Robotics & Control Engineer.
 │   ├── project-*.md  ← projects (type: project)
 │   └── paper-*.md    ← publications (type: paper)
 ├── papers/           ← PDF files for your publications
-│   └── (drop your PDFs here)
-├── assets/           ← images (profile photo, etc.)
-│   └── photo.jpg
+├── assets/           ← images (profile photo as photo.jpg)
 └── README.md
 ```
 
@@ -47,8 +45,6 @@ repo: https://github.com/OcelotIC/repo-name
 order: 1
 ---
 ```
-
-The `order` field controls the display order (lowest first).
 
 ## Deploy
 Push to `main` branch → live at `https://OcelotIC.github.io`
