@@ -645,9 +645,9 @@
             <h1>Idriss CHELIKH</h1>
             <div class="subtitle">Robotics & Control Engineer</div>
             <p class="bio">
-                Robotics engineer with a Ph.D. from ISAE-SUPAERO. My research focuses on
-                space robotics and predictive control at ONERA. I develop tools in MATLAB, Python,
-                and ROS for modeling, motion planning, and control of complex robotic systems.
+                Robotics and control engineer with research experience at ONERA and LAAS-CNRS.
+                My work focuses on predictive control and space robotics. I develop tools in MATLAB,
+                Python, and ROS for modeling, motion planning, and control of complex robotic systems.
             </p>
             <div class="hero-links">
                 <a href="https://github.com/OcelotIC" target="_blank" rel="noopener">
@@ -673,32 +673,12 @@
         <h2 class="section-title">Resume</h2>
 
         <h3 style="color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase;
-                    letter-spacing: 0.08em; margin-bottom: 18px;">Education</h3>
-        <div class="timeline fade-in">
-            <div class="timeline-item">
-                <h3>Ph.D. in Robotics & Control Engineering</h3>
-                <div class="timeline-meta">2022 — 2025 · ISAE-SUPAERO, University of Toulouse</div>
-                <p class="timeline-desc">Doctoral School EDSYS ED309. Research conducted at ONERA on space robotic manipulation and predictive control.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>M.Sc. in Robotics & Control Engineering</h3>
-                <div class="timeline-meta">2019 — 2021 · Sorbonne University / ENSAM Paris</div>
-                <p class="timeline-desc">Advanced Systems and Robotics track. Honours: Fairly Good.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>B.Sc. in Mechanics</h3>
-                <div class="timeline-meta">2016 — 2019 · Sorbonne University</div>
-                <p class="timeline-desc">Academic exchange at NTU, Singapore. Honours: Good.</p>
-            </div>
-        </div>
-
-        <h3 style="color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase;
-                    letter-spacing: 0.08em; margin: 36px 0 18px;">Experience</h3>
+                    letter-spacing: 0.08em; margin-bottom: 18px;">Experience</h3>
         <div class="timeline fade-in">
             <div class="timeline-item">
                 <h3>Doctoral Research Engineer in Space Robotics</h3>
                 <div class="timeline-meta">2022 — 2025 · ONERA, Toulouse</div>
-                <p class="timeline-desc">Worked within the AEI team (DTIS department). Modeled a space robotic manipulator and developed predictive control laws. Built and tested a full control architecture in MATLAB/Simulink. Drop out</p>
+                <p class="timeline-desc">Worked within the AEI team (DTIS department). Modeled a space robotic manipulator and developed predictive control laws. Built and tested a full control architecture in MATLAB/Simulink.</p>
             </div>
             <div class="timeline-item">
                 <h3>Research Intern — NMPC for Aerial Manipulation</h3>
@@ -723,6 +703,26 @@
             <span class="skill-tag">State Estimation</span>
             <span class="skill-tag">LaTeX</span>
             <span class="skill-tag">Git</span>
+        </div>
+
+        <h3 style="color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase;
+                    letter-spacing: 0.08em; margin: 36px 0 18px;">Education</h3>
+        <div class="timeline fade-in">
+            <div class="timeline-item">
+                <h3>Ph.D. in Robotics & Control Engineering (incomplete)</h3>
+                <div class="timeline-meta">2022 — 2025 · ISAE-SUPAERO, University of Toulouse</div>
+                <p class="timeline-desc">Doctoral School EDSYS ED309. Research conducted at ONERA on space robotic manipulation and predictive control.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>M.Sc. in Robotics & Control Engineering</h3>
+                <div class="timeline-meta">2019 — 2021 · Sorbonne University / ENSAM Paris</div>
+                <p class="timeline-desc">Advanced Systems and Robotics track. Honours: Fairly Good.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>B.Sc. in Mechanics</h3>
+                <div class="timeline-meta">2016 — 2019 · Sorbonne University</div>
+                <p class="timeline-desc">Academic exchange at NTU, Singapore. Honours: Good.</p>
+            </div>
         </div>
     </section>
 
@@ -928,7 +928,3 @@
 
         } catch (err) {
             console.error('Content loading failed:', err);
-            const msg = `<div class="error-message">
-                Could not load content from GitHub.<br>
-                <small>Make sure the repo <strong>${REPO_NAME}</strong> is public
-                and contains a <code>${CONTENT_PATH}/</code> 
