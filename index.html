@@ -975,3 +975,30 @@
 
         } catch (err) {
             console.error('Content loading failed:', err);
+            const msg = `<div class="error-message">
+                Could not load content from GitHub.<br>
+                <small>Make sure the repo <strong>${REPO_NAME}</strong> is public
+                and contains a <code>${CONTENT_PATH}/</code> folder with .md files.</small>
+            </div>`;
+            pubBox.innerHTML = msg;
+            prjBox.innerHTML = msg;
+        }
+    }
+
+    /* ==============================================================
+       Scroll animation observer
+       ============================================================== */
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    /* ==============================================================
+       Go!
+       ============================================================== */
+    loadContent();
+</script>
+
+</body>
+</html>
